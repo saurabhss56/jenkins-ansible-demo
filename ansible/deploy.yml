@@ -1,18 +1,7 @@
-- name: Deploy Hello App
-  hosts: webservers
-  become: true
-
+# playbook.yml
+- name: Hello from Ansible
+  hosts: localhost
   tasks:
-    - name: Create app folder
-      file:
-        path: /opt/hello-app
-        state: directory
-
-    - name: Copy Python app
-      copy:
-        src: app/
-        dest: /opt/hello-app/
-
-    - name: Run the app
-      shell: python3 /opt/hello-app/main.py
-
+    - name: Print message
+      debug:
+        msg: "Hello Saurabh from Ansible!"
