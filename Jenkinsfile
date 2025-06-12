@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/saurabhss56/jenkins-ansible-demo.git'
+                git url: 'https://github.com/saurabhss56/jenkins-ansible-demo.git'
             }
         }
 
